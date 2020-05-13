@@ -20,6 +20,7 @@ namespace TaraMcDonagh_S00185883
     /// </summary>
     public partial class MainWindow : Window
     {
+        PhoneData db = new PhoneData(); 
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,27 @@ namespace TaraMcDonagh_S00185883
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           
+            var query = from p in db.PhoneDetails
+                        select p;
+
+            lbxPhones.ItemsSource = query.ToList();
+        }
+
+        private void lbxPhones_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Check the selected phone
+            Phone selectedPhone = lbxPhones.SelectedItem as Phone;
+            if (selectedPhone != null)
+            {
+                //Selecting a phone will show the price for that phone on the right. (10 marks)
+
+                txtbxPrice.Text = selectedPhone.Price.ToString();
+                //Display the phone image when the phone is selected. (10 marks)
+                //BitmapImage bitmap = new BitmapImage();
+                //bitmap.BeginInit();
+                //bitmap.UriSource = new Uri(selectedPhone.Phone_Image);
+
+            }
         }
     }
 }

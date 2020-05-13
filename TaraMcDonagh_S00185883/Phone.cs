@@ -36,7 +36,8 @@ namespace TaraMcDonagh_S00185883
             Phone_Image = phoneimage;
         }*/
     }
-        public class PhoneData:DbContext
+    //Create a database using CodeFirst Entity Framework with one table which has phone details. 
+    public class PhoneData:DbContext
         {
             public PhoneData() : base("My Phone Data") { }
             public DbSet<Phone> PhoneDetails { get; set; }

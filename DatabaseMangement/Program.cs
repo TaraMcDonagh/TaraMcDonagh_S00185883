@@ -10,6 +10,7 @@ namespace DatabaseMangement
     {
         static void Main(string[] args)
         {
+            //Use the code below to create the objects, image files are provided on Moodle (20 marks)
             PhoneData db = new PhoneData();
             using (db)
             {
@@ -29,7 +30,7 @@ namespace DatabaseMangement
                     Price = 600,
                     OperatingSystem = "IOS",
                     OS_Image = "/images/apple.png",
-                    Phone_Image = "/images/iphone11.jpg"
+                    Phone_Image = "/images/iphone11.png"
                 };
                 db.PhoneDetails.Add(p1);
                 db.PhoneDetails.Add(p2);

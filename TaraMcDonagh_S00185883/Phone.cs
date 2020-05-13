@@ -12,19 +12,18 @@ namespace TaraMcDonagh_S00185883
     public class Phone
     {
         public string Name { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public string OperatingSystem { get; set; }
         public string OS_Image { get; set; }
         public string Phone_Image { get; set; }
 
         //Add a method called IncreasePrice which takes a percentage value 
         //and increases the price of a phone by that percentage. (10 marks)
-        public double IncreasePrice()
+        public void IncreasePrice(int _price, double percentage)
         {
-            double percentage;
-            double IncreasePrice = (Price*percentage) + Price;
+            double newPrice = (_price*percentage) + _price;
+            Price = newPrice;
 
-            return IncreasePrice;
         }
 
     }

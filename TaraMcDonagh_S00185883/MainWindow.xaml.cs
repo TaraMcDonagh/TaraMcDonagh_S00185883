@@ -44,9 +44,8 @@ namespace TaraMcDonagh_S00185883
 
                 txtbxPrice.Text = selectedPhone.Price.ToString();
                 //Display the phone image when the phone is selected. (10 marks)
-                //BitmapImage bitmap = new BitmapImage();
-                //bitmap.BeginInit();
-                //bitmap.UriSource = new Uri(selectedPhone.Phone_Image);
+
+                phoneImage.Source = new BitmapImage(new Uri(selectedPhone.Phone_Image));
 
             }
         }

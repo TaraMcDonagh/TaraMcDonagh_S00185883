@@ -24,5 +24,10 @@ namespace TaraMcDonagh_S00185883
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+           
+        }
     }
 }
